@@ -1,0 +1,19 @@
+{
+  "name": "cloud-wordle",
+  "version": "1.0.0",
+  "description": "fitxer json",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/u1973219/Cloud-wordle.git"
+  },
+  "author": "Sira i Nil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/u1973219/Cloud-wordle/issues"
+  },
+  "homepage": "https://github.com/u1973219/Cloud-wordle#readme"
+}
