@@ -13,4 +13,4 @@ let data;
 
 createList(endpoint,response,data);
 
-console.log(data.value);
+console.log(data.value.Name);
