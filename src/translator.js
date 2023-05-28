@@ -10,12 +10,15 @@ function traduirText(){
     req.setRequestHeader("Content-Type","application/json");
     req.setRequestHeader("Ocp-Apim-Subscription-Key", apiKey);
     req.setRequestHeader("Ocp-Apim-Subscription-Region",location);
-    var resposta = JSON.parse(req.responseText);
-    var resultatTraduit = response[0].translations[0].text;
-    document.getElementById("text-to-translate").innerHTML = resultatTraduit;
+    console.log("hola");
+    if(req.readyState === 4 && req.status === 200){
+        var resposta = JSON.parse(req.responseText);
+        var resultatTraduit = response[0].translations[0].text;
+        document.getElementById("text-aplicat").innerHTML = resultatTraduit;
 
-    var data = JSON.stringify([{ "Text": textInput}]);
-    req.send(data);
+        var data = JSON.stringify([{ "Text": textInput}]);
+        req.send(data);
+    }
 
 
 
