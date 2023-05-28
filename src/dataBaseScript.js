@@ -1,6 +1,6 @@
 
 
-async function createList(endpoint, response, data) {
+async function createList(endpoint, response, data, id) {
     endpoint = '/data-api/rest/Person';
     response = await fetch(endpoint);
     data = await response.json();
@@ -13,4 +13,4 @@ let data;
 
 createList(endpoint,response,data);
 
-console.log(data.value.Name);
+console.log(data);
