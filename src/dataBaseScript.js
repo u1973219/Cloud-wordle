@@ -12,7 +12,11 @@ async function createList() {
 createList().then(function(){
     console.table(data.value);
     console.log(data.value.Name);
+    window.onload = mainFunction();
     
+});
+
+function mainFunction(){
     var i = 1
     for (let r of data.value) {
         // console.log(r.imatge);
@@ -26,4 +30,4 @@ createList().then(function(){
         document.getElementById("PreuItem"+i).innerText = r.Price;
         console.log(r.Name);
     }
-});
+}
