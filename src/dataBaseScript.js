@@ -4,7 +4,7 @@ var data;
 async function createList() {
     const endpoint = '/data-api/rest/Person';
     const response = await fetch(endpoint);
-    data = await response.json();
+    window.data = await response.json();
     console.table(data.value);
 }
 
