@@ -13,7 +13,7 @@ createList().then(function(){
     console.table(data.value);
     console.log(data.value.Name);
     
-    for (let r of data.list) {
+    for (let r of data.value) {
         console.log(r.Name);
     }
 });
