@@ -12,8 +12,7 @@ async function createList() {
 createList().then(function(){
     console.table(data.value);
     console.log(data.value.Name);
-    window.onload = mainFunction();
-    
+    window.onload = mainFunction();    
 });
 
 function mainFunction(){
@@ -29,5 +28,6 @@ function mainFunction(){
         document.getElementById("DescrpcioItem"+i).innerText = r.Description;
         document.getElementById("PreuItem"+i).innerText = r.Price;
         console.log(r.Name);
+        //test
     }
 }
