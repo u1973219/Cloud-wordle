@@ -11,7 +11,7 @@
   padding: 20px 0;
   font-size: 30px;
 }
-/* .item1 {
-  grid-column: 1;
-   grid-row: 1;
-} */
+body{
+  background-image: url(stardew_background.png);
+  background-color: #cccccc;
+}
