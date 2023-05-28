@@ -1,53 +1,27 @@
-// Importar el SDK de cliente de Azure Translator
-import { AzureCognitiveTranslator } from 'azure-cognitiveservices-translator';
+function traduirText(){
+    var textInput = document.getElementById("text-to-translate").value;
+    var apiKey = "948738bc08c14cb9b5af370695204fc6";
+    var location = "westeurope";
+    var endpoint = "https://api.cognitive.microsofttranslator.com/translate?api-version=3.@$to=es";
 
-// Inicializar el cliente de Azure Translator
-const translatorClient = new AzureCognitiveTranslator.TextTranslatorClient('948738bc08c14cb9b5af370695204fc6', 'https://westeurope.api.cognitive.microsofttranslator.com/');
 
-// Función para realizar la traducción
-async function translateText(text, sourceLanguage, targetLanguage) {
-  try {
-    // Configurar los parámetros de la solicitud de traducción
-    const translationRequest = {
-      text: text,
-      from: sourceLanguage,
-      to: targetLanguage
-    };
+    var req = new XMLHttpRequest();
+    req.open("POST",endpoint,true);
+    req.setRequestHeader("Content-Type","application/json");
+    req.setRequestHeader("Ocp-Apim-Subscription-Key", apiKey);
+    req.setRequestHeader("Ocp-Apim-Subscription-Region",location);
+    var resposta = JSON.parse(req.responseText);
+    var resultatTraduit = response[0].translations[0].text;
+    document.getElementById("text-to-translate").innerHTML = resultatTraduit;
 
-    // Realizar la llamada al servicio de Azure Translator
-    const translationResult = await translatorClient.translate([translationRequest]);
+    var data = JSON.stringify([{ "Text": textInput}]);
+    req.send(data);
 
-    // Obtener la traducción del resultado
-    const translatedText = translationResult[0].translations[0].text;
 
-    // Retornar la traducción
-    return translatedText;
-  } catch (error) {
-    console.error('Error al realizar la traducción:', error);
-    throw error;
-  }
+
+
+
+
+
+
 }
-
-// Ejemplo de uso de la función de traducción
-async function exampleTranslation() {
-    const sourceLanguage = 'en'; // Idioma de origen (inglés)
-    const targetLanguage = 'es'; // Idioma de destino (español)
-  
-    try {
-      // Obtener el elemento de texto a traducir por su id
-      const elementToTranslate = document.getElementById('text-to-translate');
-      const textToTranslate = elementToTranslate.textContent;
-  
-      // Realizar la traducción
-      const translatedText = await translateText(textToTranslate, sourceLanguage, targetLanguage);
-  
-      // Actualizar el contenido del elemento con la traducción
-      elementToTranslate.textContent = translatedText;
-      console.log(translateText);
-    } catch (error) {
-      console.error('Error en el ejemplo de traducción:', error);
-    }
-  }
-  
-  // Llamar al ejemplo de traducción
-  exampleTranslation();
