@@ -14,12 +14,9 @@ createList().then(function(){
     console.log(data.value.Name);    
     var i = 1
     for (let r of data.value) {
-        // console.log(r.imatge);
-        // document.getElementById("ImatgeItem"+i).src = r.imatge;
-        // console.log("ImatgeItem"+i);
-        console.log("NomItem"+i);
-        console.log(r.Name);
         console.log(document.getElementById("NomItem1").innerHTML);
+        
+        document.getElementById("ImatgeItem"+i).src = r.imatge;
         nomItem = document.getElementById("NomItem"+i).innerHTML = r.Name;
         document.getElementById("DescrpcioItem"+i).innerText = r.Description;
         document.getElementById("PreuItem"+i).innerText = r.Price;
