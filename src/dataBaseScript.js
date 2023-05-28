@@ -13,4 +13,4 @@ async function createList() {
 
 createList();
 
-console.table(data.list.Name);
+console.table(data.value.Name);
