@@ -28,4 +28,15 @@ h1{
   font-weight:normal;
   font-style:normal;
   color: #cccccc;
+  font-size: large;
+}
+h2{
+  font-family: 'stardew_valleyregular', Arial;
+  color: #cccccc;
+}
+h3{
+  font-family: 'stardew_valleyregular', Arial;
+}
+p{
+  font-family: 'stardew_valleyregular', Arial;  
 }
