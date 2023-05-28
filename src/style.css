@@ -15,3 +15,8 @@ body{
   background-image: url(stardew_background.png);
   background-color: #cccccc;
 }
+h1{
+  font-family: 'stardew_valleyregular', Arial;
+  font-weight:normal;
+  font-style:normal;
+}
