@@ -2,7 +2,7 @@ function traduirText() {
     var textInput = document.getElementById("text-to-translate").value;
     var apiKey = "948738bc08c14cb9b5af370695204fc6";
     var location = "westeurope";
-    var endpoint = "https://api.cognitive.microsofttranslator.com/translate?api-version=3.0&to=es";
+    var endpoint = "https://api.cognitive.microsofttranslator.com/";
   
     var req = new XMLHttpRequest();
     req.open("POST", endpoint, true);
@@ -23,6 +23,6 @@ function traduirText() {
       }
     };
   
-    var data = JSON.stringify([{ "Text": textInput }]);
+    var data = JSON.stringify([{ "Text": textInput , "TranslationLanguage": "es"}]);
     req.send(data);
   }
