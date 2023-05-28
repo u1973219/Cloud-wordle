@@ -1,19 +1,27 @@
-<h1>Static Web Apps Database Connections</h1>
-<blockquote>
-    Open the console in the browser developer tools to see the API responses.
-</blockquote>
-<div>
-    <button id="list" onclick="list()">List</button>
-    <button id="get" onclick="get()">Get</button>
-    <button id="update" onclick="update()">Update</button>
-    <button id="create" onclick="create()">Create</button>
-    <button id="delete" onclick="del()">Delete</button>
-</div>
-<script>
-    async function list() {
-        const endpoint = '/data-api/rest/Person';
-        const response = await fetch(endpoint);
-        const data = await response.json();
-        console.table(data.value);
-    }
-</script>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WikiStardew</title>
+    </head>
+    <body>
+        <h1>WIKI STARDEW</h1>
+        <h2>Nil i Sira - Cloud Computing 2023</h2>
+        <div class="gridContainer">
+            <div class="item1">
+                <img id="ImatgeItem" src="">
+                <h3 id="NomItem">NOM ITEM</h3>
+                <p id="DescrpcioItem">descripcio item</p>
+                <p id="PreuItem">preu item</p>
+                <p id="EstacioItem">estació</p>
+            </div>
+        </div>
+        <div>
+            <button id="list" onclick="list()">List</button>
+            <button id="get" onclick="get()">Get</button>
+            <button id="update" onclick="update()">Update</button>
+            <button id="create" onclick="create()">Create</button>
+            <button id="delete" onclick="del()">Delete</button>
+        </div>
+        <script src="dataBaseScript.js"></script>
+    </body>
+</html>
