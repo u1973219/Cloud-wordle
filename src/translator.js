@@ -43,6 +43,7 @@ async function exampleTranslation() {
   
       // Actualizar el contenido del elemento con la traducción
       elementToTranslate.textContent = translatedText;
+      console.log(translateText);
     } catch (error) {
       console.error('Error en el ejemplo de traducción:', error);
     }
