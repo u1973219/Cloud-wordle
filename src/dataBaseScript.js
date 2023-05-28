@@ -1,13 +1,10 @@
 
-var endpoint;
-var response;
-var data;
 
 async function createList() {
-    endpoint = '/data-api/rest/Person';
-    response = await fetch(endpoint);
-    data = await response.json();
-    // console.table(data.value);
+    const endpoint = '/data-api/rest/Person';
+    const response = await fetch(endpoint);
+    var data = await response.json();
+    console.table(data.value);
 }
 
 
