@@ -20,8 +20,8 @@ createList().then(function(){
         // console.log("ImatgeItem"+i);
         console.log("NomItem"+i);
         console.log(r.Name);
-        console.log(document.getElementById("NomItem"+i).innerText);
-        nomItem = document.getElementById("NomItem"+i).innerText = r.Name;
+        console.log(document.getElementById("NomItem"+i).innerHTML);
+        nomItem = document.getElementById("NomItem"+i).innerHTML = r.Name;
         document.getElementById("DescrpcioItem"+i).innerText = r.Description;
         document.getElementById("PreuItem"+i).innerText = r.Price;
         console.log(r.Name);
