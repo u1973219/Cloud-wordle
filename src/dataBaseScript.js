@@ -14,3 +14,7 @@ async function createList() {
 createList();
 console.table(data.value);
 console.log(data.value.Name);
+
+for (let r of data.list) {
+    console.log(r.Name);
+}
