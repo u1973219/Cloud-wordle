@@ -12,10 +12,7 @@ async function createList() {
 createList().then(function(){
     console.table(data.value);
     console.log(data.value.Name);
-    window.onload = mainFunction();    
-});
-
-function mainFunction(){
+    
     var i = 1
     for (let r of data.value) {
         // console.log(r.imatge);
@@ -23,11 +20,10 @@ function mainFunction(){
         // console.log("ImatgeItem"+i);
         console.log("NomItem"+i);
         console.log(r.Name);
-        console.log(document.getElementById("NomItem"+i).innerHTML);
-        nomItem = document.getElementById("NomItem"+i).innerHTML = r.Name;
+        console.log(document.getElementById("NomItem1").innerHTML);
+        nomItem = document.getElementById("NomItem1").innerHTML = r.Name;
         document.getElementById("DescrpcioItem"+i).innerText = r.Description;
         document.getElementById("PreuItem"+i).innerText = r.Price;
         console.log(r.Name);
-        //test
     }
-}
+});
