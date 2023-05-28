@@ -1,7 +1,43 @@
 {
-    "databaseName": "siranil db",
-    "serverName": "siranil",
-    "username": "siranil",
-    "password": "PapuDendro9"
-}
+    "$schema": "https://dataapibuilder.azureedge.net/schemas/latest/dab.draft.schema.json",
+    "data-source": {
+      "database-type": "mssql",
+      "options": {
+        "set-session-context": false 
+      },
+      "connection-string": "Server=tcp:siranil.database.windows.net,1433;Initial Catalog=siranil db;Persist Security Info=False;User ID=siranil;Password={PapuDendro9};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+    },
+    "runtime": {
+      "rest": {
+        "enabled": true,
+        "path": "/rest"
+      },
+      "graphql": {
+        "allow-introspection": true,
+        "enabled": true,
+        "path": "/graphql"
+      },
+      "host": {
+        "mode": "production",
+        "cors": {
+          "origins": ["https://purple-stone-0e8a0f603.3.azurestaticapps.net"],
+          "allow-credentials": false
+        },
+        "authentication": {
+          "provider": "StaticWebApps"
+        }
+      }
+    },
+    "entities": {
+      "Person": {
+        "source": "dbo.StardewValley_items",
+        "permissions": [
+          {
+            "actions": ["create", "read", "update", "delete"],
+            "role": "anonymous"
+          }
+        ]
+      }
+    }
+  }
 
