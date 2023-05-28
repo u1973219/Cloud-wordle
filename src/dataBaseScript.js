@@ -15,10 +15,12 @@ createList().then(function(){
     
     var i = 1
     for (let r of data.value) {
-        console.log(r.imatge);
-        document.getElementById("ImatgeItem"+i).src = r.imatge;
-        console.log("ImatgeItem"+i);
+        // console.log(r.imatge);
+        // document.getElementById("ImatgeItem"+i).src = r.imatge;
+        // console.log("ImatgeItem"+i);
         document.getElementById("NomItem"+i).innerHTML = r.Name;
+        document.getElementById("DescrpcioItem"+i).innerHTML = r.Description;
+        document.getElementById("PreuItem"+i).innerHTML = r.Price;
         console.log(r.Name);
     }
 });
